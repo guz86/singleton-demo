@@ -1,8 +1,9 @@
 class Logger
-  def say_something
+  def self.say_something
     puts 'ha'
   end
 end
 
-logger = Logger.new
-logger.say_something
+#logger = Logger.new
+#logger.say_something
+Logger.say_something
