@@ -1,35 +1,6 @@
-class Logger
-  def initialize
-    @f = File.open 'log.txt','a'
-  end
+require './logger'
 
-@@x = nil
-
-  def self.instance
-    if @@x == nil
-      @@x = Logger.new
-    end
-
-    return @@x
-  end
-
-
-  # class method
-  def self.say_something
-    puts 'ha'
-  end
-
-  # instance method
-  def log_something what  
-    @f.puts what
-  end
-end
-
-
-#logger.say_something
 Logger.say_something
+
 Logger.instance.log_something 'bla bla'
 Logger.instance.log_something 'bla bla2'
-
-#logger = Logger.new
-#logger.log_something 'aaa'
