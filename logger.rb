@@ -10,6 +10,7 @@ class Logger
   # instance method
   def log_something what  
     @f.puts what
+    @f.flush
   end
 
 end
